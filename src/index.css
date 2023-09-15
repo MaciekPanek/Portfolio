@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #171717;
+}
+
+.container {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: transparent;
+  z-index: -20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+}
+@media (min-width: 640px) {
+  .container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: transparent;
+    z-index: -20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -20;
+    transform: scale(2.5);
+  }
+}
+
+.react-logo {
+  display: inline-block;
+  border-radius: 50%;
+  /* border: 10px solid #b32c2c; */
+  animation-name: rotate;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.react-logo,
+.react-logo:before,
+.react-logo:after {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 70px;
+  z-index: -20;
+  opacity: 0.5;
+  border-radius: 50%;
+  border: 10px solid #454545;
+}
+
+.nucleo,
+.react-logo,
+.react-logo:before,
+.react-logo:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nucleo {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #454545;
+  opacity: 0.7;
+}
+
+.react-logo:before,
+.react-logo:after {
+  content: "";
+}
+
+.react-logo:after {
+  transform: rotate(-57deg);
+}
+
+.react-logo:before {
+  transform: rotate(57deg);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

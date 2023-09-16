@@ -4,7 +4,7 @@ function IntroductionSection() {
   return (
     <section className="h-max px-4">
       <h1 className="text-stone-200 text-[50px] leading-[3.5rem] superpixel-antialiased ">
-        I design and develop applications.
+        I design and develop applications abcde.
       </h1>
       <h3 className="text-stone-400 text-xl leading-10 mt-[3rem] ">
         {`I'm full-time frontend developer with a passion for great design and

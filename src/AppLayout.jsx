@@ -8,9 +8,9 @@ import MobileHeader from "./features/header/MobileHeader";
 function AppLayout() {
   return (
     <>
-      <HeaderSection />
       <MobileHeader />
-      <main className="mt-36 h-max max-w-[640px] sm:mx-auto ">
+      <main className="mt-36 h-max max-w-[640px] sm:mx-auto md:max-w-[770px] lg:max-w-[1024px] xl:max-w-[1280px] ">
+        <HeaderSection />
         <IntroductionSection />
         <ProjectsSection />
         <AboutSection />

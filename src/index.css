@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .nav-link {
+    @apply relative text-base font-light text-dark-400 hover:text-dark-500 dark:text-dark-300 dark:hover:text-dark-200;
+  }
+  .mobile-nav-link {
+    @apply relative text-2xl font-light text-dark-400 hover:text-dark-500 dark:text-dark-200 dark:hover:text-dark-100;
+  }
+  .nav-link::before,
+  .mobile-nav-link::before {
+    content: "";
+    @apply absolute left-0 -bottom-0.5 h-[1px] w-full origin-right scale-x-0 bg-dark-200 transition-transform duration-300 ease-in-out dark:bg-dark-400;
+  }
+  .nav-link:hover::before,
+  .mobile-nav-link:hover::before,
+  .active-nav-link::before {
+    @apply origin-left scale-x-100;
+  }
+}
+
 body {
   background-color: #171717;
 }
@@ -19,14 +38,14 @@ body {
 }
 @media (min-width: 640px) {
   .container {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    background: transparent;
     z-index: -20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: scale(2.5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-right: 190px;
     z-index: -20;
     transform: scale(2.5);
   }

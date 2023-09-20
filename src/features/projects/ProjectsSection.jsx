@@ -1,3 +1,5 @@
+import Project from "./Project";
+
 function ProjectsSection() {
   return (
     <section className="h-max px-4 pb-28 " id="projects">
@@ -13,34 +15,26 @@ function ProjectsSection() {
         projects on the left-hand side.
       </h3>
       <section className="mt-10">
-        <article className="max-w-[640px] mt-10 ">
-          <img src="/MovieSaverSS.png" />
-          <p className="text-dark-400 mt-3 italic text-sm ">
-            Design and development
-          </p>
-          <h3 className="text-dark-200 text-3xl mt-3 ">MovieSaver</h3>
-        </article>
-        <article className="max-w-[640px] mt-10 ">
-          <img src="/MovieSaverSS.png" />
-          <p className="text-dark-400 mt-3 italic text-sm ">
-            Design and development
-          </p>
-          <h3 className="text-dark-200 text-3xl mt-3 ">MovieSaver</h3>
-        </article>
-        <article className="max-w-[640px] mt-10 ">
-          <img src="/MovieSaverSS.png" />
-          <p className="text-dark-400 mt-3 italic text-sm ">
-            Design and development
-          </p>
-          <h3 className="text-dark-200 text-3xl mt-3 ">MovieSaver</h3>
-        </article>
-        <article className="max-w-[640px] mt-10 ">
-          <img src="/MovieSaverSS.png" />
-          <p className="text-dark-400 mt-3 italic text-sm ">
-            Design and development
-          </p>
-          <h3 className="text-dark-200 text-3xl mt-3 ">MovieSaver</h3>
-        </article>
+        <Project
+          title={"MovieSaver"}
+          tech={"Design and development"}
+          src={"/MovieSaverSS.png"}
+        />
+        <Project
+          title={"MovieSaver"}
+          tech={"Design and development"}
+          src={"/MovieSaverSS.png"}
+        />
+        <Project
+          title={"MovieSaver"}
+          tech={"Design and development"}
+          src={"/MovieSaverSS.png"}
+        />
+        <Project
+          title={"MovieSaver"}
+          tech={"Design and development"}
+          src={"/MovieSaverSS.png"}
+        />
       </section>
     </section>
   );

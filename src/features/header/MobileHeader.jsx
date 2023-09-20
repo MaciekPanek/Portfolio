@@ -5,6 +5,23 @@ import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import NavLink from "./NavLink";
 
+const variantsButton = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
+
 const variants = {
   open: {
     opacity: 1,
@@ -12,6 +29,8 @@ const variants = {
     transition: {
       type: "spring",
       duration: 0.6,
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
   },
   closed: {
@@ -22,15 +41,9 @@ const variants = {
 
 function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link); // Set the active link when clicked
-    setIsMenuOpen(false); // Close the menu
   };
 
   return (
@@ -53,44 +66,41 @@ function MobileHeader() {
           className="md:hidden flex flex-col items-center z-30 h-[70%]  bg-dark-700 fixed inset-x-0 top-0 p-4 pt-20 "
         >
           <NavLink
-            tailStyle={`mb-7 text-3xl ${
-              activeLink === "intro" ? "active-nav-link" : ""
-            }  `}
-            href={"/#intro"}
-            onClick={() => handleLinkClick("intro")}
+            href="/#intro"
+            tailStyle={"text-3xl mb-5 "}
+            onClick={toggleMenu}
           >
             Introduction
           </NavLink>
           <NavLink
-            tailStyle={`mb-7 text-3xl ${
-              activeLink === "projects" ? "active-nav-link" : ""
-            }  `}
-            href={"/#projects"}
-            onClick={() => handleLinkClick("projects")}
+            href="/#projects"
+            tailStyle={"text-3xl mb-5 "}
+            onClick={toggleMenu}
           >
             Projects
           </NavLink>
           <NavLink
-            tailStyle={`mb-7 text-3xl ${
-              activeLink === "about" ? "active-nav-link" : ""
-            }  `}
-            href={"/#about"}
-            onClick={() => handleLinkClick("about")}
+            href="/#about"
+            tailStyle={"text-3xl mb-5 "}
+            onClick={toggleMenu}
           >
             About
           </NavLink>
           <NavLink
-            tailStyle={`mb-7 text-3xl ${
-              activeLink === "contact" ? "active-nav-link" : ""
-            }  `}
-            href={"/#contact"}
-            onClick={() => handleLinkClick("contact")}
+            href="/#contact"
+            tailStyle={"text-3xl mb-5 "}
+            onClick={toggleMenu}
           >
             Contact
           </NavLink>
-          <button className="text-dark-400 ">
+          <motion.button
+            variants={variantsButton}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-dark-400 text-3xl "
+          >
             <BsFillSunFill />
-          </button>
+          </motion.button>
         </motion.nav>
       )}
     </>

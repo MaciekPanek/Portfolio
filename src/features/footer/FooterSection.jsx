@@ -9,7 +9,7 @@ function FooterSection() {
         <div className="h-[1px] flex-1 bg-dark-100  dark:bg-dark-700"></div>
       </header>
 
-      <div className="flex items-center justify-around px-4 py-5 ">
+      <div className="flex items-center justify-around px-4 py-20 ">
         <a className="text-dark-300 text-xl hover:underline ">GitHub</a>
         <a className="text-dark-300 text-xl p-2  ">LinkedIn</a>
       </div>

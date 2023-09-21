@@ -1,21 +1,16 @@
 import { LoremIpsum } from "react-lorem-ipsum";
+import Heading from "../../ui/Heading";
 
 function AboutSection() {
   return (
     <section className="h-max px-4 py " id="about">
-      <header className="flex items-center ">
-        <div className="h-[1px] flex-1 bg-dark-100  dark:bg-dark-700"></div>
-        <h2 className="w-24 text-center text-sm uppercase tracking-wider text-dark-200 dark:text-dark-400">
-          About
-        </h2>
-        <div className="h-[1px] flex-1 bg-dark-100  dark:bg-dark-700"></div>
-      </header>
+      <Heading>About</Heading>
       <section className="py-52">
         <p className="text-dark-200 leading-8 text-lg ">
           {<LoremIpsum p={1} avgWordsPerSentence={1.5} />}
         </p>
         <figure className="max-w-[640px]">
-          <img className=" blur  " src="./MovieSaverSS.png" />
+          <img className=" blur max-h-[500px]  " src="./portret-2.jpeg" />
         </figure>
         <article>
           <p className="text-dark-200 leading-8 mt-5 text-lg ">

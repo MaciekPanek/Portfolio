@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import NavLink from "./NavLink";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 
 const variantsButton = {
   open: {
@@ -46,6 +47,12 @@ function MobileHeader() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
+  const ref = useOutsideClick(closeMenu);
+
   return (
     <>
       <a className="fixed top-8 left-4 z-40 md:hidden" href="/#">
@@ -63,6 +70,7 @@ function MobileHeader() {
           initial="closed"
           animate={isMenuOpen ? "open" : "closed"}
           variants={variants}
+          ref={ref}
           className="md:hidden flex flex-col items-center z-30 h-[70%]  bg-dark-700 fixed inset-x-0 top-0 p-4 pt-20 "
         >
           <NavLink

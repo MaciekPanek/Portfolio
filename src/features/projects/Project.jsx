@@ -1,9 +1,25 @@
-function Project({ title, tech, src }) {
+function Project({ title, tech, src, children, url }) {
   return (
-    <article className="max-w-[640px] mt-10 ">
-      <img src={src} />
-      <p className="text-dark-400 mt-3 italic text-sm ">{tech}</p>
-      <h3 className="text-dark-200 text-3xl mt-3 ">{title}</h3>
+    <article className=" mt-10 flex flex-col gap-3 lg:flex-row ">
+      <a href={url} rel="noreferrer" target="_blank">
+        <img
+          src={src}
+          className="min-[520px]:max-w-[500px] hover:scale-105 hover:transition-all hover:duration-500 "
+        />
+      </a>
+
+      <div className="flex flex-col gap-3 ">
+        <a href={url} rel="noreferrer" target="_blank">
+          <h3 className="text-dark-200 text-3xl hover:scale-110 hover:transition-all hover:duration-500 hover:-translate-x-[-15px] ">
+            {title}
+          </h3>
+        </a>
+
+        <p className="text-dark-400 italic text-sm ">{tech}</p>
+        <p className="text-dark-200  italic text-lg max-w-[500px] lg:w-[500px] ">
+          {children}
+        </p>
+      </div>
     </article>
   );
 }

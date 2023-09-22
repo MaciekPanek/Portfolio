@@ -8,7 +8,7 @@ function IntroductionSection() {
           I develop and bring projects to life.
         </h1>
         <h3 className="text-stone-400 text-xl leading-10 mt-[3rem] ">
-          I am frontend developer with passion and great sense of easthetics.
+          I am frontend developer with passion and great sense of aesthetics.
         </h3>
         <a
           href="/#projects"

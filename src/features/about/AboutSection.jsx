@@ -1,4 +1,5 @@
 import Heading from "../../ui/Heading";
+import Paragraph from "./Paragraph";
 
 function AboutSection() {
   return (
@@ -15,10 +16,10 @@ function AboutSection() {
           />
         </figure>
         <article className=" lg:w-max  md:basis-1/2 lg:basis-auto">
-          <p className="text-dark-200 leading-8 mt-5 text-lg ">
+          <Paragraph>
             My name is Maciek Panek. I am 20 years old, I live near city of
             Rzeszów, Poland, and I am a self taught frontend developer.
-          </p>
+          </Paragraph>
           <p className="text-dark-200 leading-8 mt-5 text-lg ">
             My journey with programming began in June 2022, I picked it up out
             of boredom after work, at first it was just a hobby, but after six
@@ -30,7 +31,13 @@ function AboutSection() {
             carving my way into digital design and fullstack technologies so I
             can expand my carrer spectrum.
           </p>
-          <p className="text-dark-200 leading-8 mt-5 text-lg "></p>
+          <p className="text-dark-200 leading-8 mt-5 text-lg font-extralight ">
+            I really enjoy finding new things and ideas that I am able to
+            implement into my daily life, whether it is for work, or my own
+            benefit. It also gives an andvantage in other interests that I
+            picked up, like astronomy or aerospace technology that I like to
+            explore.
+          </p>
         </article>
       </section>
     </section>

@@ -8,7 +8,7 @@ function HeaderSection() {
   useEffect(() => {
     const sectionIds = ["intro", "projects", "about", "contact"];
     const handleScroll = () => {
-      const scrollY = window.scrollY;
+      // const scrollY = window.scrollY;
 
       // Find the section currently in the viewport
       for (const sectionId of sectionIds) {

@@ -4,7 +4,7 @@ function IntroductionSection() {
   return (
     <section className="h-max px-4 lg:flex lg:my-60 " id="intro">
       <div>
-        <h1 className="text-stone-200 leading-[3.5rem] superpixel-antialiased text-5xl font-medium md:text-6xl lg:text-7xl ">
+        <h1 className="text-stone-300 md:text-stone-200 leading-[3.5rem] superpixel-antialiased text-5xl font-medium md:text-6xl lg:text-7xl ">
           I develop and bring projects to life.
         </h1>
         <h3 className="text-stone-400 text-xl leading-10 mt-[3rem] ">

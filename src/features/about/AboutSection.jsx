@@ -3,9 +3,9 @@ import Paragraph from "./Paragraph";
 
 function AboutSection() {
   return (
-    <section className="h-max px-4 py " id="about">
+    <section className="h-max px-4 mb-40 py " id="about">
       <Heading>About</Heading>
-      <p className="text-dark-200 leading-8 text-center my-20 italic  text-3xl font-extralight  ">
+      <p className="text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  ">
         Have a brief look at some details about me if you are interested :){" "}
       </p>
       <section className="flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 ">
@@ -20,24 +20,24 @@ function AboutSection() {
             My name is Maciek Panek. I am 20 years old, I live near city of
             Rzeszów, Poland, and I am a self taught frontend developer.
           </Paragraph>
-          <p className="text-dark-200 leading-8 mt-5 text-lg ">
+          <Paragraph>
             My journey with programming began in June 2022, I picked it up out
             of boredom after work, at first it was just a hobby, but after six
             months I decided to make it my future career... and here I am.
-          </p>
-          <p className="text-dark-200 leading-8 mt-5 text-lg ">
+          </Paragraph>
+          <Paragraph>
             I love trying new technologies and programming languages, I started
             with Python and Java, then I fell in love with web dev, and now I am
             carving my way into digital design and fullstack technologies so I
             can expand my carrer spectrum.
-          </p>
-          <p className="text-dark-200 leading-8 mt-5 text-lg font-extralight ">
+          </Paragraph>
+          <Paragraph>
             I really enjoy finding new things and ideas that I am able to
             implement into my daily life, whether it is for work, or my own
             benefit. It also gives an andvantage in other interests that I
             picked up, like astronomy or aerospace technology that I like to
             explore.
-          </p>
+          </Paragraph>
         </article>
       </section>
     </section>

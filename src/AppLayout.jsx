@@ -1,4 +1,4 @@
-import AboutSection from "./features/About/AboutSection";
+import AboutSection from "./features/about/AboutSection";
 import IntroductionSection from "./features/Introduction/IntroductionSection";
 import ProjectsSection from "./features/Projects/ProjectsSection";
 import FooterSection from "./features/footer/FooterSection";

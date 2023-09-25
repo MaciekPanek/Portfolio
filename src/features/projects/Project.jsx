@@ -1,4 +1,4 @@
-function Project({ title, tech, src, children, url }) {
+function Project({ title, tech, src, children, url, href }) {
   return (
     <article className=" mt-10 flex flex-col gap-3 lg:flex-row ">
       <a href={url} rel="noreferrer" target="_blank">
@@ -13,6 +13,9 @@ function Project({ title, tech, src, children, url }) {
           <h3 className="text-dark-200 text-3xl hover:scale-110 hover:transition-all hover:duration-500 hover:-translate-x-[-15px] ">
             {title}
           </h3>
+        </a>
+        <a className="text-dark-400 italic text-sm " href={href}>
+          GitHub Repo &rarr;
         </a>
 
         <p className="text-dark-400 italic text-sm ">{tech}</p>

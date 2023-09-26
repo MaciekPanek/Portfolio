@@ -56,7 +56,7 @@ const variants4 = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 0.3,
+      delay: 0.2,
     },
   },
 };

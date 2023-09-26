@@ -1,6 +1,11 @@
 import Heading from "../../ui/Heading";
 import Paragraph from "./Paragraph";
 
+import { TbBrandVscode } from "react-icons/tb";
+import { BiLogoJavascript } from "react-icons/bi";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiFramer } from "react-icons/si";
+
 function AboutSection() {
   return (
     <section className="h-max px-4 mb-40 py " id="about">
@@ -38,6 +43,16 @@ function AboutSection() {
             picked up, like astronomy or aerospace technology that I like to
             explore.
           </Paragraph>
+          <p className="text-center text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl">
+            My TechStack
+          </p>
+          <span className="text-dark-300 flex gap-4 text-3xl items-center justify-center ">
+            <TbBrandVscode />
+            <BiLogoJavascript />
+            <FaReact />
+            <SiTailwindcss />
+            <SiFramer />
+          </span>
         </article>
       </section>
     </section>

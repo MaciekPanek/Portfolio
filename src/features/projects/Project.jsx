@@ -14,7 +14,10 @@ function Project({ title, tech, src, children, url, href }) {
             {title}
           </h3>
         </a>
-        <a className="text-dark-400 italic text-sm " href={href}>
+        <a
+          className="text-dark-400 italic text-sm hover:text-dark-300  "
+          href={href}
+        >
           GitHub Repo &rarr;
         </a>
 

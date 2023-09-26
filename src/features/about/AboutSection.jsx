@@ -1,10 +1,26 @@
 import Heading from "../../ui/Heading";
 import Paragraph from "./Paragraph";
+import { motion } from "framer-motion";
 
 import { TbBrandVscode } from "react-icons/tb";
 import { BiLogoJavascript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiFramer } from "react-icons/si";
+
+const variants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
 
 function AboutSection() {
   return (
@@ -15,28 +31,34 @@ function AboutSection() {
       </p>
       <section className="flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 ">
         <figure className="max-w-[640px] md:basis-1/2  ">
-          <img
+          <motion.img
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
             className=" blur max-w-[350px] lg:max-w-[400px] "
             src="./portret-2.jpeg"
           />
         </figure>
         <article className=" lg:w-max  md:basis-1/2 lg:basis-auto">
-          <Paragraph>
+          <Paragraph delay={0.1}>
             My name is Maciek Panek. I am 20 years old, I live near city of
             Rzeszów, Poland, and I am a self taught frontend developer.
           </Paragraph>
-          <Paragraph>
+          <Paragraph delay={0.15}>
             My journey with programming began in June 2022, I picked it up out
             of boredom after work, at first it was just a hobby, but after six
             months I decided to make it my future career... and here I am.
           </Paragraph>
-          <Paragraph>
+          <Paragraph delay={0.2}>
             I love trying new technologies and programming languages, I started
             with Python and Java, then I fell in love with web dev, and now I am
             carving my way into digital design and fullstack technologies so I
             can expand my carrer spectrum.
           </Paragraph>
-          <Paragraph>
+          <Paragraph delay={0.15}>
             I really enjoy finding new things and ideas that I am able to
             implement into my daily life, whether it is for work, or my own
             benefit. It also gives an andvantage in other interests that I

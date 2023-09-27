@@ -48,11 +48,11 @@ const variants3 = {
 const variants4 = {
   initial: {
     opacity: 0,
-    x: 200,
+    y: 200,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       type: "spring",
       duration: 1,
@@ -106,13 +106,13 @@ function IntroductionSection() {
       <section>
         <div className="container lg:mt-24 ">
           <motion.span
+            className="react-logo  "
             variants={variants4}
             initial="initial"
             whileInView="animate"
             viewport={{
               once: true,
             }}
-            className="react-logo  "
           >
             <span className="nucleo"></span>
           </motion.span>

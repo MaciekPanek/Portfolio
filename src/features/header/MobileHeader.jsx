@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { BsFillSunFill } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import NavLink from "./NavLink";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 const variantsButton = {
   open: {
@@ -47,6 +48,8 @@ function MobileHeader() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   function closeMenu() {
     setIsMenuOpen(false);
   }
@@ -59,7 +62,7 @@ function MobileHeader() {
         <img src="/Logo.png" />
       </a>
       <button
-        className="fixed top-8 right-4 z-40 text-3xl  text-dark-200 mix-blend-difference hover:opacity-60 md:hidden"
+        className="fixed top-8 right-4 z-40 text-3xl text-dark-200 dark:text-dark-200 mix-blend-difference hover:opacity-60 md:hidden"
         onClick={toggleMenu}
       >
         {isMenuOpen ? <MdClose /> : <FiMenu />}
@@ -71,7 +74,7 @@ function MobileHeader() {
           animate={isMenuOpen ? "open" : "closed"}
           variants={variants}
           ref={ref}
-          className="md:hidden flex flex-col items-center z-30 h-[70%]  bg-dark-700 fixed inset-x-0 top-0 p-4 pt-20 "
+          className="md:hidden flex flex-col items-center z-30 h-[70%]  dark:bg-dark-700 bg-stone-300 fixed inset-x-0 top-0 p-4 pt-20 "
         >
           <NavLink
             href="/#intro"
@@ -106,8 +109,9 @@ function MobileHeader() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="text-dark-400 text-3xl "
+            onClick={toggleDarkMode}
           >
-            <BsFillSunFill />
+            {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
           </motion.button>
         </motion.nav>
       )}

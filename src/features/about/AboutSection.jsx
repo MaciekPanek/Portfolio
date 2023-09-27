@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import { TbBrandVscode } from "react-icons/tb";
 import { BiLogoJavascript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss, SiFramer } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiFramer,
+  SiSass,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si";
 
 const variants = {
   initial: {
@@ -18,6 +24,23 @@ const variants = {
     transition: {
       type: "spring",
       duration: 1,
+      delay: 0.2,
+    },
+  },
+};
+
+const variants2 = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+      delay: 0.25,
     },
   },
 };
@@ -26,9 +49,17 @@ function AboutSection() {
   return (
     <section className="h-max px-4 mb-40 py " id="about">
       <Heading>About</Heading>
-      <p className="text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  ">
+      <motion.p
+        variants={variants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  "
+      >
         Have a brief look at some details about me if you are interested :){" "}
-      </p>
+      </motion.p>
       <section className="flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 ">
         <figure className="max-w-[640px] md:basis-1/2  ">
           <motion.img
@@ -58,23 +89,42 @@ function AboutSection() {
             carving my way into digital design and fullstack technologies so I
             can expand my carrer spectrum.
           </Paragraph>
-          <Paragraph delay={0.15}>
+          <Paragraph delay={0.25}>
             I really enjoy finding new things and ideas that I am able to
             implement into my daily life, whether it is for work, or my own
             benefit. It also gives an andvantage in other interests that I
             picked up, like astronomy or aerospace technology that I like to
             explore.
           </Paragraph>
-          <p className="text-center text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl">
+          <motion.p
+            variants={variants2}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="text-center text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl"
+          >
             My TechStack
-          </p>
-          <span className="text-dark-300 flex gap-4 text-3xl items-center justify-center ">
+          </motion.p>
+          <motion.span
+            variants={variants2}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="text-dark-300 flex gap-4 text-3xl items-center justify-center "
+          >
             <TbBrandVscode />
+            <SiHtml5 />
+            <SiCss3 />
+            <SiSass />
             <BiLogoJavascript />
             <FaReact />
             <SiTailwindcss />
             <SiFramer />
-          </span>
+          </motion.span>
         </article>
       </section>
     </section>

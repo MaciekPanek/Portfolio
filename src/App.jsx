@@ -1,10 +1,11 @@
 import AppLayout from "./AppLayout";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 function App() {
   return (
-    <div>
+    <DarkModeProvider>
       <AppLayout />
-    </div>
+    </DarkModeProvider>
   );
 }
 

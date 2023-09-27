@@ -1,9 +1,12 @@
-import { BsFillSunFill } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 function HeaderSection() {
   const [activeLink, setActiveLink] = useState("intro"); // Initialize with the first section ID
+
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const sectionIds = ["intro", "projects", "about", "contact"];
@@ -48,8 +51,8 @@ function HeaderSection() {
         <NavLink href="/#contact" isActive={activeLink === "contact"}>
           Contact
         </NavLink>
-        <button className="text-dark-400 ">
-          <BsFillSunFill />
+        <button className="text-dark-400 " onClick={toggleDarkMode}>
+          {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
         </button>
       </nav>
     </header>

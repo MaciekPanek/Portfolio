@@ -1,13 +1,40 @@
+import { useDarkMode } from "../../context/DarkModeContext";
 import Heading from "../../ui/Heading";
 
 function FooterSection() {
+  const { isDarkMode } = useDarkMode();
+
+  const colors = {
+    dark700: "#292929",
+    dark600: "#373737",
+  };
+
+  if (!isDarkMode) {
+    colors.dark700 = "#dadada";
+    colors.dark600 = "#EDEDED";
+  }
+
   return (
     <section id="contact">
       <Heading>Socials</Heading>
 
       <div className="flex items-center justify-around px-4 py-20 ">
-        <a className="text-dark-300 text-xl ">GitHub</a>
-        <a className="text-dark-300 text-xl">LinkedIn</a>
+        <a
+          className="text-dark-300 text-xl hover:text-dark-200 hover:scale-105 "
+          href="https://github.com/MaciekPanek"
+          rel="noreferrer"
+          target="_blank"
+        >
+          GitHub
+        </a>
+        <a
+          className="text-dark-300 text-xl hover:text-dark-200 hover:scale-105"
+          href="https://www.linkedin.com/in/maciej-panek-077748241/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
       </div>
 
       <div>
@@ -26,10 +53,10 @@ function FooterSection() {
             />
           </defs>
           <g className="parallax">
-            <use xlinkHref="#gentle-wave" x="48" y="0" fill="#292929" />
-            <use xlinkHref="#gentle-wave" x="48" y="3" fill="#373737" />
-            <use xlinkHref="#gentle-wave" x="48" y="5" fill="#292929" />
-            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#373737" />
+            <use xlinkHref="#gentle-wave" x="48" y="0" fill={colors.dark700} />
+            <use xlinkHref="#gentle-wave" x="48" y="3" fill={colors.dark600} />
+            <use xlinkHref="#gentle-wave" x="48" y="5" fill={colors.dark700} />
+            <use xlinkHref="#gentle-wave" x="48" y="7" fill={colors.dark600} />
           </g>
         </svg>
       </div>
@@ -38,15 +65,3 @@ function FooterSection() {
 }
 
 export default FooterSection;
-
-// 50: "#EDEDED",
-// 100: "#dadada",
-// 200: "#b5b5b5",
-// 300: "#8f8f8f",
-// 400: "#6a6a6a",
-// 500: "#454545",
-// 600: "#373737",
-// 700: "#292929",
-// 800: "#1c1c1c",
-// 850: "#171717",
-// 900: "#0e0e0e",

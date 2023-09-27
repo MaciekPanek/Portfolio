@@ -45,21 +45,6 @@ const variants3 = {
     },
   },
 };
-const variants4 = {
-  initial: {
-    opacity: 0,
-    y: 200,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      duration: 1,
-      delay: 0.2,
-    },
-  },
-};
 
 function IntroductionSection() {
   return (
@@ -72,11 +57,9 @@ function IntroductionSection() {
           viewport={{
             once: true,
           }}
-          className="text-stone-300 md:text-stone-200 leading-[3.5rem] superpixel-antialiased text-5xl font-medium md:text-6xl lg:text-7xl "
+          className="dark:text-stone-300 text-dark-300 leading-[3.5rem] superpixel-antialiased text-5xl font-medium md:text-6xl lg:text-7xl "
         >
-          <span>I</span> <span>develop</span> <span>and</span>{" "}
-          <span>bring</span> <span>projects</span> <span>to</span>{" "}
-          <span>life</span>.
+          I develop and bring projects to life.
         </motion.h1>
         <motion.h3
           variants={variants2}
@@ -85,7 +68,7 @@ function IntroductionSection() {
           viewport={{
             once: true,
           }}
-          className="text-stone-400 text-xl leading-10 mt-[3rem] "
+          className="dark:text-stone-400 text-dark-300 text-xl leading-10 mt-[3rem] "
         >
           I am frontend developer with passion and great sense of aesthetics.
         </motion.h3>
@@ -105,17 +88,9 @@ function IntroductionSection() {
       </div>
       <section>
         <div className="container lg:mt-24 ">
-          <motion.span
-            className="react-logo  "
-            variants={variants4}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-          >
+          <span className="react-logo ">
             <span className="nucleo"></span>
-          </motion.span>
+          </span>
         </div>
       </section>
     </section>

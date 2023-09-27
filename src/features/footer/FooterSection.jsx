@@ -1,5 +1,6 @@
 import { useDarkMode } from "../../context/DarkModeContext";
 import Heading from "../../ui/Heading";
+import { motion } from "framer-motion";
 
 function FooterSection() {
   const { isDarkMode } = useDarkMode();
@@ -14,27 +15,69 @@ function FooterSection() {
     colors.dark600 = "#EDEDED";
   }
 
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: 200,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        duration: 1,
+      },
+    },
+  };
+
+  const emailAddress = "mpanek138@gmail.com";
+
   return (
     <section id="contact">
       <Heading>Socials</Heading>
 
       <div className="flex items-center justify-around px-4 py-20 ">
-        <a
+        <motion.a
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
           className="text-dark-300 text-xl hover:text-dark-200 hover:scale-105 "
           href="https://github.com/MaciekPanek"
           rel="noreferrer"
           target="_blank"
         >
           GitHub
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="text-dark-300 text-xl hover:text-dark-200 hover:scale-105 "
+          href={`mailto:${emailAddress}`}
+        >
+          mpanek138@gmail.com
+        </motion.a>
+
+        <motion.a
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
           className="text-dark-300 text-xl hover:text-dark-200 hover:scale-105"
           href="https://www.linkedin.com/in/maciej-panek-077748241/"
           rel="noreferrer"
           target="_blank"
         >
           LinkedIn
-        </a>
+        </motion.a>
       </div>
 
       <div>

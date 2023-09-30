@@ -45,6 +45,17 @@ function ProjectsSection() {
           favourite movies or tv shows you already watched, or add new ones to
           your watchlist.
         </Project>
+        <Project
+          title={"MovieSaver"}
+          tech={"React, ReactQuery, Tailwind, Motion Framer"}
+          src={"/MovieSaverSS.png"}
+          url={"https://movie-saver-three.vercel.app/"}
+          href={"https://github.com/MaciekPanek/MovieSaver"}
+        >
+          MovieSaver is a website, where you can search and bookmark your
+          favourite movies or tv shows you already watched, or add new ones to
+          your watchlist.
+        </Project>
       </section>
     </section>
   );

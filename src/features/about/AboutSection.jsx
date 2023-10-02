@@ -13,6 +13,8 @@ import {
   SiCss3,
   SiSupabase,
 } from "react-icons/si";
+import Tip from "./Tip";
+// import { Tooltip as React } from "react-tooltip";
 
 const variants = {
   initial: {
@@ -59,7 +61,7 @@ function AboutSection() {
         }}
         className="text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  "
       >
-        Have a brief look at some details about me if you are interested :){" "}
+        Have a brief look at some details about me if you are interested :)
       </motion.p>
       <section className="flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 ">
         <figure className="max-w-[640px] md:basis-1/2  ">
@@ -77,7 +79,7 @@ function AboutSection() {
         <article className=" lg:w-max  md:basis-1/2 lg:basis-auto">
           <Paragraph delay={0.1}>
             My name is Maciek Panek. I am 20 years old, I live near city of
-            Rzeszów, Poland, and I am a self taught frontend developer.
+            Rzeszów, Poland, and I am a self-taught frontend developer.
           </Paragraph>
           <Paragraph delay={0.15}>
             My journey with programming began in June 2022, I picked it up out
@@ -87,15 +89,14 @@ function AboutSection() {
           <Paragraph delay={0.2}>
             I love trying new technologies and programming languages, I started
             with Python and Java, then I fell in love with web dev, and now I am
-            carving my way into digital design and fullstack technologies so I
-            can expand my carrer spectrum.
+            carving my way into digital design and full-stack technologies so I
+            can expand my career spectrum.
           </Paragraph>
           <Paragraph delay={0.25}>
             I really enjoy finding new things and ideas that I am able to
             implement into my daily life, whether it is for work, or my own
-            benefit. It also gives an andvantage in other interests that I
-            picked up, like astronomy or aerospace technology that I like to
-            explore.
+            benefit. It also gives an advantage in other interests that I picked
+            up, like astronomy or aerospace technology that I like to explore.
           </Paragraph>
           <motion.p
             variants={variants2}
@@ -117,18 +118,37 @@ function AboutSection() {
             }}
             className="text-dark-300 flex gap-4 text-3xl items-center justify-center "
           >
-            <TbBrandVscode />
-            <SiHtml5 />
-            <SiCss3 />
-            <SiSass />
-            <BiLogoJavascript />
-            <FaReact />
-            <SiSupabase />
-            <SiTailwindcss />
-            <SiFramer />
+            <Tip id="vscode" content="Visual Studio Code">
+              <TbBrandVscode />
+            </Tip>
+            <Tip id="html" content="HTML5">
+              <SiHtml5 />
+            </Tip>
+            <Tip id="css" content="CSS3">
+              <SiCss3 />
+            </Tip>
+            <Tip id="javascript" content="JavaScript">
+              <BiLogoJavascript />
+            </Tip>
+            <Tip id="react" content="React">
+              <FaReact />
+            </Tip>
+            <Tip id="tailwind" content="Tailwind CSS">
+              <SiTailwindcss />
+            </Tip>
+            <Tip id="framer" content="Framer Motion">
+              <SiFramer />
+            </Tip>
+            <Tip id="sass" content="Sass">
+              <SiSass />
+            </Tip>
+            <Tip content="Supabase" id="supabase">
+              <SiSupabase />
+            </Tip>
           </motion.span>
         </article>
       </section>
+      {/* <Tooltip effect="solid" place="top" type="dark" id="framer" /> */}
     </section>
   );
 }

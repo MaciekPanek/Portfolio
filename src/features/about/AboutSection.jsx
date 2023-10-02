@@ -11,6 +11,7 @@ import {
   SiSass,
   SiHtml5,
   SiCss3,
+  SiSupabase,
 } from "react-icons/si";
 
 const variants = {
@@ -122,6 +123,7 @@ function AboutSection() {
             <SiSass />
             <BiLogoJavascript />
             <FaReact />
+            <SiSupabase />
             <SiTailwindcss />
             <SiFramer />
           </motion.span>

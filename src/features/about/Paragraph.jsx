@@ -25,7 +25,7 @@ function Paragraph({ children, delay }) {
       viewport={{
         once: true,
       }}
-      className="text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight italic lg:text-2xl "
+      className="text-dark-400 dark:text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight italic lg:text-2xl "
     >
       {children}
     </motion.p>

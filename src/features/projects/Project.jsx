@@ -112,7 +112,7 @@ function Project({ title, tech, src, children, url, href }) {
           rel="noreferrer"
           target="_blank"
         >
-          <h3 className="text-dark-200 text-3xl hover:scale-110 hover:transition-all hover:duration-500 hover:-translate-x-[-15px] ">
+          <h3 className="text-dark-400 dark:text-dark-200 text-3xl hover:scale-110 hover:transition-all hover:duration-500 hover:-translate-x-[-15px] ">
             {title}
           </h3>
         </motion.a>
@@ -147,7 +147,7 @@ function Project({ title, tech, src, children, url, href }) {
           viewport={{
             once: true,
           }}
-          className="text-dark-200  italic text-lg max-w-[500px] lg:w-[500px] "
+          className="text-dark-400 dark:text-dark-200  italic text-lg max-w-[500px] lg:w-[500px] "
         >
           {children}
         </motion.p>

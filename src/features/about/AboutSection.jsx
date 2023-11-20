@@ -59,7 +59,7 @@ function AboutSection() {
         viewport={{
           once: true,
         }}
-        className="text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  "
+        className="text-dark-400 dark:text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  "
       >
         Have a brief look at some details about me if you are interested :)
       </motion.p>
@@ -105,7 +105,7 @@ function AboutSection() {
             viewport={{
               once: true,
             }}
-            className="text-center text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl"
+            className="text-center text-dark-400 dark:text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl"
           >
             My TechStack
           </motion.p>

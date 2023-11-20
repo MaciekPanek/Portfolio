@@ -29,7 +29,7 @@ function ProjectsSection() {
         viewport={{
           once: true,
         }}
-        className="mt-16 text-dark-200 leading-[3rem] text-center text-[50px] font-extralight italic tracking-wide "
+        className="mt-16 text-dark-400 dark:text-dark-200 leading-[3rem] text-center text-[50px] font-extralight italic tracking-wide "
       >
         Check out a few of my projects.
       </motion.h3>

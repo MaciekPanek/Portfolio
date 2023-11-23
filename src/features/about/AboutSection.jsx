@@ -1,19 +1,12 @@
-import Heading from "../../ui/Heading";
-import Paragraph from "./Paragraph";
-import { motion } from "framer-motion";
+import Heading from '../../ui/Heading';
+import Paragraph from './Paragraph';
+import { motion } from 'framer-motion';
 
-import { TbBrandVscode } from "react-icons/tb";
-import { BiLogoJavascript } from "react-icons/bi";
-import { FaReact } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiFramer,
-  SiSass,
-  SiHtml5,
-  SiCss3,
-  SiSupabase,
-} from "react-icons/si";
-import Tip from "./Tip";
+import { TbBrandVscode } from 'react-icons/tb';
+import { BiLogoJavascript } from 'react-icons/bi';
+import { FaReact } from 'react-icons/fa';
+import { SiTailwindcss, SiFramer, SiSass, SiHtml5, SiCss3, SiSupabase } from 'react-icons/si';
+import Tip from './Tip';
 // import { Tooltip as React } from "react-tooltip";
 
 const variants = {
@@ -25,7 +18,7 @@ const variants = {
     opacity: 1,
     x: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       duration: 1,
       delay: 0.2,
     },
@@ -41,7 +34,7 @@ const variants2 = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       duration: 1,
       delay: 0.25,
     },
@@ -50,99 +43,93 @@ const variants2 = {
 
 function AboutSection() {
   return (
-    <section className="h-max px-4 mb-40 py " id="about">
+    <section className='h-max px-4 mb-40 py ' id='about'>
       <Heading>About</Heading>
       <motion.p
         variants={variants}
-        initial="initial"
-        whileInView="animate"
+        initial='initial'
+        whileInView='animate'
         viewport={{
           once: true,
         }}
-        className="text-dark-400 dark:text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  "
-      >
+        className='text-dark-400 dark:text-dark-200 leading-8 text-center mt-28 mb-28  italic  text-3xl font-extralight  '>
         Have a brief look at some details about me if you are interested :)
       </motion.p>
-      <section className="flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 ">
-        <figure className="max-w-[640px] md:basis-1/2  ">
+      <section className='flex flex-col md:flex-row gap-5 md:gap-10 md:justify-center md:items-start items-center  mb-20 '>
+        <figure className='max-w-[640px] md:basis-1/2  '>
           <motion.img
             variants={variants}
-            initial="initial"
-            whileInView="animate"
+            initial='initial'
+            whileInView='animate'
             viewport={{
               once: true,
             }}
-            className=" blur max-w-[350px] lg:max-w-[400px] "
-            src="./portret-2.jpeg"
+            className=' rounded-lg max-w-[350px] lg:max-w-[400px] '
+            src='./portret-3.jpeg'
           />
         </figure>
-        <article className=" lg:w-max  md:basis-1/2 lg:basis-auto">
+        <article className=' lg:w-max  md:basis-1/2 lg:basis-auto'>
           <Paragraph delay={0.1}>
-            My name is Maciek Panek. I am 20 years old, I live near city of
-            Rzeszów, Poland, and I am a self-taught frontend developer.
+            My name is Maciek Panek. I am 20 years old, I live near city of Rzeszów, Poland, and I am a self-taught
+            frontend developer.
           </Paragraph>
           <Paragraph delay={0.15}>
-            My journey with programming began in June 2022, I picked it up out
-            of boredom after work, at first it was just a hobby, but after six
-            months I decided to make it my future career... and here I am.
+            My journey with programming began in June 2022, I picked it up out of boredom after work, at first it was
+            just a hobby, but after six months I decided to make it my future career... and here I am.
           </Paragraph>
           <Paragraph delay={0.2}>
-            I love trying new technologies and programming languages, I started
-            with Python and Java, then I fell in love with web dev, and now I am
-            carving my way into digital design and full-stack technologies so I
-            can expand my career spectrum.
+            I love trying new technologies and programming languages. I have started with Python and Java, then I fell
+            in love with web dev, and now I am carving my way into digital design and full-stack technologies so I can
+            expand my career spectrum.
           </Paragraph>
           <Paragraph delay={0.25}>
-            I really enjoy finding new things and ideas that I am able to
-            implement into my daily life, whether it is for work, or my own
-            benefit. It also gives an advantage in other interests that I picked
-            up, like astronomy or aerospace technology that I like to explore.
+            I really enjoy finding new things and ideas that I am able to implement into my daily life, whether it is
+            for work, or my own benefit. It also gives an advantage in other interests that I picked up, like astronomy
+            or aerospace technology that I like to explore.
           </Paragraph>
           <motion.p
             variants={variants2}
-            initial="initial"
-            whileInView="animate"
+            initial='initial'
+            whileInView='animate'
             viewport={{
               once: true,
             }}
-            className="text-center text-dark-400 dark:text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl"
-          >
+            className='text-center text-dark-400 dark:text-dark-200 leading-8 mb-5 lg:mb-10 text-lg font-extralight lg:text-2xl'>
             My TechStack
           </motion.p>
           <motion.span
             variants={variants2}
-            initial="initial"
-            whileInView="animate"
+            initial='initial'
+            whileInView='animate'
             viewport={{
               once: true,
             }}
-            className="text-dark-300 flex gap-4 text-3xl items-center justify-center "
-          >
-            <Tip id="vscode" content="Visual Studio Code">
+            className='text-dark-300 flex gap-4 text-3xl items-center justify-center '>
+            <Tip id='vscode' content='Visual Studio Code'>
               <TbBrandVscode />
             </Tip>
-            <Tip id="html" content="HTML5">
+            <Tip id='html' content='HTML5'>
               <SiHtml5 />
             </Tip>
-            <Tip id="css" content="CSS3">
+            <Tip id='css' content='CSS3'>
               <SiCss3 />
             </Tip>
-            <Tip id="javascript" content="JavaScript">
+            <Tip id='javascript' content='JavaScript'>
               <BiLogoJavascript />
             </Tip>
-            <Tip id="react" content="React">
+            <Tip id='react' content='React'>
               <FaReact />
             </Tip>
-            <Tip id="tailwind" content="Tailwind CSS">
+            <Tip id='tailwind' content='Tailwind CSS'>
               <SiTailwindcss />
             </Tip>
-            <Tip id="framer" content="Framer Motion">
+            <Tip id='framer' content='Framer Motion'>
               <SiFramer />
             </Tip>
-            <Tip id="sass" content="Sass">
+            <Tip id='sass' content='Sass'>
               <SiSass />
             </Tip>
-            <Tip content="Supabase" id="supabase">
+            <Tip content='Supabase' id='supabase'>
               <SiSupabase />
             </Tip>
           </motion.span>

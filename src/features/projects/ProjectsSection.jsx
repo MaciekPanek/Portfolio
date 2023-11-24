@@ -61,8 +61,7 @@ function ProjectsSection() {
           // url={'https://villa-rental.vercel.app/'}
           // href={'https://github.com/MaciekPanek/Dashboard'}
         >
-          Next project is connected with Villa Rental Project, but is dedicated for customers. Main goal of this project
-          will be learning TypeScript and other technologies along the way.
+          Main goal of this project will be learning TypeScript with React and other technologies along the way.
         </Project>
         <motion.h4
           variants={variants}

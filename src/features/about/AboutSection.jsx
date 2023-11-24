@@ -3,9 +3,18 @@ import Paragraph from './Paragraph';
 import { motion } from 'framer-motion';
 
 import { TbBrandVscode } from 'react-icons/tb';
-import { BiLogoJavascript } from 'react-icons/bi';
 import { FaReact } from 'react-icons/fa';
-import { SiTailwindcss, SiFramer, SiSass, SiHtml5, SiCss3, SiSupabase } from 'react-icons/si';
+import {
+  SiTailwindcss,
+  SiFramer,
+  SiSass,
+  SiHtml5,
+  SiCss3,
+  SiSupabase,
+  SiTypescript,
+  SiNextdotjs,
+  SiJavascript,
+} from 'react-icons/si';
 import Tip from './Tip';
 // import { Tooltip as React } from "react-tooltip";
 
@@ -79,8 +88,7 @@ function AboutSection() {
           </Paragraph>
           <Paragraph delay={0.2}>
             I love trying new technologies and programming languages. I have started with Python and Java, then I fell
-            in love with web dev, and now I am carving my way into digital design and full-stack technologies so I can
-            expand my career spectrum.
+            in love with web dev, and now I am carving my way into more technologies so I can expand my career spectrum.
           </Paragraph>
           <Paragraph delay={0.25}>
             I really enjoy finding new things and ideas that I am able to implement into my daily life, whether it is
@@ -115,7 +123,7 @@ function AboutSection() {
               <SiCss3 />
             </Tip>
             <Tip id='javascript' content='JavaScript'>
-              <BiLogoJavascript />
+              <SiJavascript />
             </Tip>
             <Tip id='react' content='React'>
               <FaReact />
@@ -131,6 +139,31 @@ function AboutSection() {
             </Tip>
             <Tip content='Supabase' id='supabase'>
               <SiSupabase />
+            </Tip>
+          </motion.span>
+          <motion.p
+            variants={variants2}
+            initial='initial'
+            whileInView='animate'
+            viewport={{
+              once: true,
+            }}
+            className='text-center text-dark-400 dark:text-dark-200 leading-8 mb-5 lg:mb-10 mt-20 text-lg font-extralight lg:text-2xl'>
+            Technologies I learn now or in the future{' '}
+          </motion.p>
+          <motion.span
+            variants={variants2}
+            initial='initial'
+            whileInView='animate'
+            viewport={{
+              once: true,
+            }}
+            className='text-dark-300 flex gap-4 mt-10 text-3xl items-center justify-center '>
+            <Tip id='typescript' content='TypeScript'>
+              <SiTypescript />
+            </Tip>
+            <Tip id='nextjs' content='NextJs'>
+              <SiNextdotjs />
             </Tip>
           </motion.span>
         </article>

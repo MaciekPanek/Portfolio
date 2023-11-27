@@ -49,7 +49,7 @@ function ProjectsSection() {
           src={'/villa-rental.jpeg'}
           url={'https://villa-rental.vercel.app/'}
           href={'https://github.com/MaciekPanek/Dashboard'}>
-          Villa Rental is a website only for employees of the company. It is designed for desctops and tablets.
+          Villa Rental is a website only for employees of the company. It is designed for desktops and tablets.
           Employees can book new guests, create new villas for rent and check important data from last 30 days on main
           dashboard.
         </Project>

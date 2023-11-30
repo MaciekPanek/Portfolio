@@ -125,6 +125,9 @@ function AboutSection() {
             <Tip id='javascript' content='JavaScript'>
               <SiJavascript />
             </Tip>
+            <Tip id='typescript' content='TypeScript'>
+              <SiTypescript />
+            </Tip>
             <Tip id='react' content='React'>
               <FaReact />
             </Tip>
@@ -159,9 +162,9 @@ function AboutSection() {
               once: true,
             }}
             className='text-dark-300 flex gap-4 mt-10 text-3xl items-center justify-center '>
-            <Tip id='typescript' content='TypeScript'>
+            {/* <Tip id='typescript' content='TypeScript'>
               <SiTypescript />
-            </Tip>
+            </Tip> */}
             <Tip id='nextjs' content='NextJs'>
               <SiNextdotjs />
             </Tip>

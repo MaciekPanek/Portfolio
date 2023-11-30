@@ -61,7 +61,7 @@ function ProjectsSection() {
           // url={'https://villa-rental.vercel.app/'}
           // href={'https://github.com/MaciekPanek/Dashboard'}
         >
-          Main goal of this project will be learning TypeScript with React and other technologies along the way.
+          I am building this project with TypeScript as to show my skills in the language, coming soon...
         </Project>
         <motion.h4
           variants={variants}

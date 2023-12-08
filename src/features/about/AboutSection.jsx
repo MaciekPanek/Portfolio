@@ -15,6 +15,7 @@ import {
   SiNextdotjs,
   SiJavascript,
   SiStyledcomponents,
+  SiNodedotjs,
 } from 'react-icons/si';
 import Tip from './Tip';
 // import { Tooltip as React } from "react-tooltip";
@@ -173,8 +174,11 @@ function AboutSection() {
             {/* <Tip id='typescript' content='TypeScript'>
               <SiTypescript />
             </Tip> */}
-            <Tip id='nextjs' content='NextJs'>
+            <Tip id='nextjs' content='Next.js'>
               <SiNextdotjs />
+            </Tip>
+            <Tip id='nodejs' content='Node.js'>
+              <SiNodedotjs />
             </Tip>
           </motion.span>
         </article>

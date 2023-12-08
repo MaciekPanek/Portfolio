@@ -14,6 +14,7 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiJavascript,
+  SiStyledcomponents,
 } from 'react-icons/si';
 import Tip from './Tip';
 // import { Tooltip as React } from "react-tooltip";
@@ -79,21 +80,25 @@ function AboutSection() {
         </figure>
         <article className=' lg:w-max  md:basis-1/2 lg:basis-auto'>
           <Paragraph delay={0.1}>
-            My name is Maciek Panek. I am 20 years old, I live near city of Rzeszów, Poland, and I am a self-taught
-            frontend developer.
+            My name is Maciek Panek. I am 20 years old, I live near city of
+            Rzeszów, Poland, and I am a self-taught frontend developer.
           </Paragraph>
           <Paragraph delay={0.15}>
-            My journey with programming began in June 2022, I picked it up out of boredom after work, at first it was
-            just a hobby, but after six months I decided to make it my future career... and here I am.
+            My journey with programming began in June 2022, I picked it up out
+            of boredom after work, at first it was just a hobby, but after six
+            months I decided to make it my future career... and here I am.
           </Paragraph>
           <Paragraph delay={0.2}>
-            I love trying new technologies and programming languages. I have started with Python and Java, then I fell
-            in love with web dev, and now I am carving my way into more technologies so I can expand my career spectrum.
+            I love trying new technologies and programming languages. I have
+            started with Python and Java, then I fell in love with web dev, and
+            now I am carving my way into more technologies so I can expand my
+            career spectrum.
           </Paragraph>
           <Paragraph delay={0.25}>
-            I really enjoy finding new things and ideas that I am able to implement into my daily life, whether it is
-            for work, or my own benefit. It also gives an advantage in other interests that I picked up, like astronomy
-            or aerospace technology that I like to explore.
+            I really enjoy finding new things and ideas that I am able to
+            implement into my daily life, whether it is for work, or my own
+            benefit. It also gives an advantage in other interests that I picked
+            up, like astronomy or aerospace technology that I like to explore.
           </Paragraph>
           <motion.p
             variants={variants2}
@@ -142,6 +147,9 @@ function AboutSection() {
             </Tip>
             <Tip content='Supabase' id='supabase'>
               <SiSupabase />
+            </Tip>
+            <Tip content='Styled Components' id='styled'>
+              <SiStyledcomponents />
             </Tip>
           </motion.span>
           <motion.p

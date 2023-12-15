@@ -86,12 +86,12 @@ function AboutSection() {
           </Paragraph>
           <Paragraph delay={0.15}>
             My journey with programming began in June 2022, I picked it up out
-            of boredom after work, at first it was just a hobby, but after six
-            months I decided to make it my future career... and here I am.
+            of curiosity and I have focused all my mind on it ever since, then I
+            have decided to make it my future career... and here I am.
           </Paragraph>
           <Paragraph delay={0.2}>
             I love trying new technologies and programming languages. I have
-            started with Python and Java, then I fell in love with web dev, and
+            started with Python and Java, then I fell in love with frontend, and
             now I am carving my way into more technologies so I can expand my
             career spectrum.
           </Paragraph>
